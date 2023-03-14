@@ -1,6 +1,9 @@
-# module-24- Technical Report
+# Module-24- Technical Report
 
  # Predictors of Startup Success 
+### Abstract
+In recent years, numbers of startups have been on the rise. This industry plays a major role in the economic growth of many countries. With an estimate 1 out of 10 successes, most startups are struggling to find financing due to the perceived risk. In this project, we seek to understand the key factors capable of predicting a startups success which could help optimize the cash deployed and standardize the investment process. To do so, we have constructed several supervised machine learning models capable to predict a startups success and extracted the most important features affecting their prediction. The results have shown that the most important features investors and founders can increase the chances of success by establishing many business relationships. Furthermore, the positioning the company in ecommerce or the biotech industry will give a higher chance of success. For the financing of the business, founders should focus on the VC funding round and D round of financing. 
+
 ### Introduction
 A Startup is a new company (qualified when still at a project phase) which seeks to develop an innovation capable of disrupting sectors. While entrepreneurship refers to all new businesses, including self-employment and businesses that never intend to become registered, startups refer to new businesses that intend to grow and validate a scalable economic model.  
 
@@ -28,15 +31,15 @@ The ROC curve combines TPR(y-axis) and FPR (x-axis). In general, the AUC is a go
 
 ### Summary of the Results
 
-Although all models have a similar roc_auc score, the highest score was from the AdaBoost Model with 0.810. Logistic Regression has the lowest score with 0.796. 
+All models have a similar roc_auc score, the highest score was from the AdaBoost Model with 0.810. Logistic Regression has the lowest score with 0.796. 
 
 Preliminary results show the following:
-**Decision Tree Based Classifiers**
+**Random Forest & Adaboost**
 - Classifier "AdaBoost" and "Random Forest" are models using regression trees. Using such models, it is normal to see the importance of One Hot Encoded variables to be lower since the decision tree decision takes weights each variable for the decision to the rest of the dataset hence a lower strength since it mostly applies to a small subset of the data. Furthermore, it is very interesting to see that in the One Hot Encoded Variables in these models the feature has_VC is the most important feature of this class.
 - Relationships is the most consistent feature with a high prediction importance.
 - The interestingly the total funding in USD does not have a great impact on the success of a company. This challenges the optic that companies capable to raise a lot of money or are seen as industry challengers by investors carries almost no weight to the outcome of success.
 
-**Other Models**
+**Logistic Regression & Support Vector Machines**
 - The logistic Regression and SVM highlight as 2 most important features: "relationships" and "is_top500"
 - The 2 highest sectors to be successful is "ecommerce" and "biotech"
 - Furthermore, across the funding round it is interesting to note that the presence of a VC_round is very good to success but the importance of the following 2-3 rounds are less important finishing with the presence of round_D as the most important
